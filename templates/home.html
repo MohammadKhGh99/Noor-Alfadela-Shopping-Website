@@ -12,28 +12,58 @@
 </head>
 <body>
   <header>
-    <a href="{{url_for('home')}}">
-      <span class="material-symbols-outlined profile">
-        person
-      </span>
-    </a>
-    <a href="{{url_for('home')}}">
-      <img class="logo" src="{{ url_for('static', filename='images/logo.jpg')}}" alt="LOGO">
-    </a>
-    <a href="{{url_for('home')}}">
-      <div class="shopping-cart">
+    <div class="header-upper">
+      <a href="{{url_for('home')}}" class="profile">
+        <span class="material-symbols-outlined profile-icon">
+          person
+        </span>
+      </a>
+      <a href="{{url_for('home')}}" class="logo">
+        <span class="logo">
+          <img src="{{ url_for('static', filename='images/logo.jpg')}}" alt="LOGO">
+        </span>
+      </a>
+      <a href="{{url_for('home')}}" class="shopping-cart">
         <span class="material-symbols-outlined shopping-cart-icon">
           shopping_cart
         </span>
         <span class="counter">
           0
         </span>
-      </div>
-    </a>
+      </a>
+    </div>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="{{url_for('home')}}">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('home')}}">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('home')}}">
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="{{url_for('home')}}">
+            Services
+          </a>
+            <ul class="dropdown">
+              <li>First</li>
+              <li>Second</li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <br><br><br>
-  <br><br><br>
-  
+  <br><br><br><br><br><br>
+
   <products>
     {% for product in products %}
     <product>
@@ -48,5 +78,20 @@
     </product>
     {% endfor %}
   </products>
+  <br><br>
+  <footer>
+    <div class="who-we">
+      Who We
+      <hr>
+    </div>
+    <div class="important-links">
+      important links
+      <hr>
+    </div>
+    <div class="contact-us">
+      contact us
+      <hr>
+    </div>
+  </footer>
 </body>
 </html>

@@ -3,31 +3,89 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -23px;
   width: 100%;
   height: 120px;
   z-index: 1000;
   padding: 0 1rem;
-  display: grid;
+  display: block;
   background-color: #fef9f6;
-  grid-template-columns: repeat(3, 1fr);
-  border-bottom: 5px solid #f2e4d7;
+  /*border-bottom: 5px solid #f2e4d7;*/
 }
+
+.header-upper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fef9f6;
+  align-items: center;
+  /*grid-template-columns: repeat(3, 1fr);*/
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between; /* Distribute links evenly */
+  align-items: center;
+  background-color: #f2e4d7;
+  /*padding: 10px;*/
+  height: 30px;
+}
+
+header nav a:hover {
+  color: black;
+}
+
+header ul {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  /*margin: 0 30px;*/
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #AD7765;
+  /*padding: 22px 0;*/
+  display: inline-block;
+  /*transition: all ease 0.3s;*/
+  padding: 2px 15px;
+  font-size: 18px;
+}
+
+header ul .dropdown {
+  position: absolute;
+  width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 45px #00000020;
+  margin-top: -50px;
+  opacity: 0;
+  z-index: -999;
+}
+
+header ul li:hover .dropdown {
+  opacity: 1;
+  z-index: 99;
+  margin-top: 0;
+  display: grid
+}
+
 
 .shopping-cart {
   position: absolute;
-  /*display: flex;*/
   left: 70px;
   top: 40px;
-  cursor: pointer;
 }
 
 .shopping-cart-icon {
   color: #AD7765;
   font-size: 40px;
+}
 
+.shopping-cart-icon:hover {
+  color: black;
 }
 
 .counter {
@@ -39,28 +97,34 @@ header {
   height: 25px;
   background-color: #f2e4d7;
   text-align: center;
-  font-size: 18px;
-  /*padding: 2px 5px;*/
+  font-size: 20px;
 }
 
 .logo {
   width: 100px;
   height: 100px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   margin: auto;
-  /*align-items: center;*/
 }
 
 .profile {
-  font-size: 40px;
-  color: #AD7765;
   position: absolute;
   top: 40px;
   right: 50px;
-  cursor: pointer;
+
 }
+
+.profile-icon {
+  font-size: 40px;
+  color: #AD7765;
+  /*cursor: pointer;*/
+}
+
+.profile-icon:hover {
+  color: black;
+}
+
 
 products {
   display: grid;
@@ -92,4 +156,24 @@ product {
   width: 70%;
   height: 70%;
   object-fit: contain;
+}
+
+footer {
+  height: 150px;
+  background-color: #d2b1a6;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+}
+
+footer div {
+  display: block;
+  text-align: center;
+}
+
+footer div hr {
+  height: 1px;
+  width: 230px;
+  color: white;
+  background-color: white;
 }
