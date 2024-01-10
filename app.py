@@ -10,7 +10,7 @@ app.config['DEBUG'] = True
 products = [filename for filename in os.listdir('static/images/products')] * 4
 
 
-@app.route('/')
+@app.route('/home.html')
 def home():
     return render_template('home.html', products=products)
 
@@ -27,5 +27,6 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    webbrowser.open("http://127.0.0.1:5000")
+    webbrowser.open("http://127.0.0.1:5000/home.html")
     app.run()
+    

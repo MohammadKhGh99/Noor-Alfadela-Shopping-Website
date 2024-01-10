@@ -1,6 +1,15 @@
 body {
   display: block;
+  width: 100%;
+  margin: 0;
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*top: 0;*/
 }
+
+/*html {*/
+/*  width: 100%;*/
+/*}*/
 
 header {
   position: fixed;
@@ -32,14 +41,15 @@ header nav {
   height: 30px;
 }
 
-header nav a:hover {
+header ul li a:hover {
   color: black;
+  text-decoration: underline;
 }
 
 header ul {
   display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
   list-style: none;
   width: 100%;
   /*margin: 0 30px;*/
@@ -52,14 +62,15 @@ header ul li a {
   display: inline-block;
   /*transition: all ease 0.3s;*/
   padding: 2px 15px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 header ul .dropdown {
   position: absolute;
-  width: 200px;
-  background-color: #ffffff;
+  width: 100px;
+  background-color: #AD7765;
   box-shadow: 0 20px 45px #00000020;
+  border-radius: 5%;
   margin-top: -50px;
   opacity: 0;
   z-index: -999;
@@ -135,45 +146,75 @@ products {
 }
 
 product {
+  /*display: flex;*/
   display: block;
   text-align: center;
   border-radius: 5%;
   color: #AD7765;
   background-color: #fef9f6;
   width: 270px;
-  height: 300px;
-  /*padding: 5px 5px;*/
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2),
-              -5px -5px 5px rgba(0, 0, 0, 0.2);
+  height: 330px;
+  /*padding: 0 21px;*/
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+              -2px -2px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.product-image {
+product div {
   display: flex;
   justify-content: center;
+  /*align-items: center;*/
   margin: auto;
   padding: 5px 0;
   width: 70%;
   height: 70%;
-  object-fit: contain;
+
+}
+
+product span {
+  margin: 0;
+}
+
+product hr {
+  margin: 5px 40px;
 }
 
 footer {
   height: 150px;
+  width: 100%;
+  /*box-sizing: border-box;*/
   background-color: #d2b1a6;
   display: flex;
   justify-content: space-between;
-  padding: 0 120px;
+  /*padding: 0 70px;*/
+
 }
 
 footer div {
   display: block;
   text-align: center;
+  padding: 0 75px;
 }
 
 footer div hr {
-  height: 1px;
+  height: 1.5px;
   width: 230px;
   color: white;
   background-color: white;
+  margin: 0;
+  border: #AD7765;
+}
+
+footer div a {
+  text-decoration: none;
+
+}
+
+footer div iconify-icon {
+  color: black;
+  padding: 7px 0;
+}
+
+footer div iconify-icon:hover {
+  color: #fef9f6;
 }
